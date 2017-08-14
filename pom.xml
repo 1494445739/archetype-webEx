@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- ====================================================== -->
+    <!--                         POM 版本                       -->
+    <!-- ====================================================== -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ====================================================== -->
+    <!--                         POM 类型                       -->
+    <!-- ====================================================== -->
+    <packaging>pom</packaging>
+
+    <!-- ====================================================== -->
+    <!--                         POM GAV                        -->
+    <!-- ====================================================== -->
+    <groupId>com.tzg</groupId>
+    <artifactId>tzg-deporoute</artifactId>
+    <version>1.0.0</version>
+
+    <!-- ====================================================== -->
+    <!--                       项目名和组织                      -->
+    <!-- ====================================================== -->
+    <url>http://www.tzg.cn</url>
+    <name>${project.artifactId}</name>
+    <description>存管路由</description>
+
+    <!-- ====================================================== -->
+    <!--                        开发者介绍                       -->
+    <!-- ====================================================== -->
+    <developers>
+        <developer>
+            <name>请填写项目成员</name>
+            <email>请填写项目成员电邮</email>
+            <organization>杭州铜米金融服务有限公司</organization>
+        </developer>
+    </developers>
+
+    <!-- ====================================================== -->
+    <!--                        存管子模块                       -->
+    <!-- ====================================================== -->
+    <modules>
+        <module>tzg-depo-route-api</module>
+        <module>tzg-depo-route-biz</module>
+        <module>tzg-depo-route-dao</module>
+        <module>tzg-depo-route-web</module>
+        <module>tzg-depo-route-tool</module>
+        <module>tzg-depo-route-consumer</module>
+        <module>tzg-depo-route-provider</module>
+    </modules>
+
+    <!-- ====================================================== -->
+    <!--                      组件依赖管理                       -->
+    <!-- ====================================================== -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.tzg</groupId>
+                <artifactId>framework-wrapper</artifactId>
+                <version>1.0.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.tzg</groupId>
+            <artifactId>service-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>
